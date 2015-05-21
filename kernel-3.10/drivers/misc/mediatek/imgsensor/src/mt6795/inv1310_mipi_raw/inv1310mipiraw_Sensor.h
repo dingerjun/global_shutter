@@ -77,6 +77,7 @@ typedef struct imgsensor_struct {
     kal_uint8 i2c_write_id;         //record current sensor's i2c write id
     kal_uint8 update_sensor_otp_awb;          // Update sensor awb from otp or not
     kal_uint8 update_sensor_otp_lsc;          // Update sensor lsc from otp or not
+    kal_bool   globalshutter_en;      //global shutter enable or disable //dingej1 2015.05.19
 } imgsensor_struct;
 
 /* SENSOR PRIVATE STRUCT FOR CONSTANT*/

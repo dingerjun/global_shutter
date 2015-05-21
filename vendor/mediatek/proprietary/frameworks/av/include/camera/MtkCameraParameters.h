@@ -484,6 +484,10 @@ public:
     // PDAF
     static const char KEY_PDAF[];
     static const char KEY_PDAF_SUPPORTED[];
+
+//dingej1 2015.05.19
+    static const char KEY_GLOBAL_SHUTTER[];
+
     
 public:     ////    on/off => FIXME: should be replaced with TRUE[]
     static const char ON[];

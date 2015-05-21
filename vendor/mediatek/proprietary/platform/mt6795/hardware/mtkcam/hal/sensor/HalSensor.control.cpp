@@ -1686,6 +1686,10 @@ MINT HalSensor::sendCommand(
         cmdId = CMD_SENSOR_SET_N3D_STOP_STREAMING;
         pSensorDrv->sendCommand((SENSOR_DEV_ENUM)sensorDevId,cmdId, arg1);
         break;
+    case SENSOR_CMD_SET_GLOBAL_SHUTTER:
+        cmdId = CMD_SENSOR_SET_GLOBAL_SHUTTER;
+        pSensorDrv->sendCommand((SENSOR_DEV_ENUM)sensorDevId,cmdId, arg1);
+        break;
     default:
         ret = -1;
         MY_LOGD("[sendCommand] err: 0x%x \n", cmd);

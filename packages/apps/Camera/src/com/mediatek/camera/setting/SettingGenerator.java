@@ -627,6 +627,18 @@ public class SettingGenerator {
                         true, settingId);
             }
             break;
+        case SettingConstants.ROW_SETTING_GLOBAL_SHUTTER:
+/*
+            if (!ParametersHelper.isDepthAfSupported(parameters)
+                    && !ParametersHelper.isDistanceInfoSuppported(parameters)) {
+                removePreference = true;
+            } else {
+                removePreference = filterUnsupportedEntries(preference, mSupportedDualCamera,
+                        true, settingId);
+            }
+*/		removePreference = false;
+            break;
+
         default:
             break;
         }

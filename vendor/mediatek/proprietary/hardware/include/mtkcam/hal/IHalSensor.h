@@ -209,6 +209,7 @@ enum
     SENSOR_CMD_GET_YUV_TRIGGER_FLASHLIGHT_INFO,         /*!<Command to get YUV sensor current flashlight auto fire necessity. arg1:[output] fire or not, arg2:N/A, arg3:N/A*/
     SENSOR_CMD_GET_PDAF_DATA,                           /*!<Command to get PDAF data from  sensor OTP. arg1:[input] offset, arg2:[input]pointer of buffer, arg3:[input]size*/
     SENSOR_CMD_GET_SENSOR_PDAF_CAPACITY,                /*!<Command to get PDAF capacity by scenario ID. arg1:[input] scenario, arg2:support PDAF or not*/
+    SENSOR_CMD_SET_GLOBAL_SHUTTER,
     SENSOR_CMD_MAX                 = 0xFFFF
 } ;
 

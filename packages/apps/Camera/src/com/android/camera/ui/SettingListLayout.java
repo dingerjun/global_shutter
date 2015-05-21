@@ -153,6 +153,8 @@ public class SettingListLayout extends FrameLayout implements InLineSettingItem.
                 || SettingConstants.KEY_SMILE_SHOT.equals(pref.getKey())
                 || SettingConstants.KEY_SLOW_MOTION.equals(pref.getKey())
                 || SettingConstants.KEY_CAMERA_AIS.equals(pref.getKey())
+//dingej1 2015.05.17
+                || SettingConstants.KEY_GLOBAL_SHUTTER.equals(pref.getKey())
                 || SettingConstants.KEY_ASD.equals(pref.getKey());
     }
     

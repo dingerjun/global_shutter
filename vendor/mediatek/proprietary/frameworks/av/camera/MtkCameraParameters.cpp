@@ -439,4 +439,7 @@ const char MtkCameraParameters::KEY_NATIVE_PIP_SUPPORTED[] = "native-pip-support
 const char MtkCameraParameters::KEY_PDAF[] = "pdaf";
 const char MtkCameraParameters::KEY_PDAF_SUPPORTED[] = "pdaf-supported";
 
+//dingej1 2015.0519
+const char MtkCameraParameters::KEY_GLOBAL_SHUTTER[] = "global-shutter";
+
 }; // namespace android

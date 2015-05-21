@@ -1973,6 +1973,13 @@ ImgSensorDrv::sendCommand(
         LOG_MSG("[CMD_SENSOR_SET_IHDR_SHUTTER_GAIN] FeaturePara[0] = %llu, FeaturePara[1] = %llu, FeaturePara[2] = %llu, FeaturePara[3] = %llu \n", FeaturePara[0], FeaturePara[1], FeaturePara[2], FeaturePara[3]);
 #endif
         break;
+//dingej1 2015.05.19
+    case CMD_SENSOR_SET_GLOBAL_SHUTTER:
+        FeatureId = SENSOR_FEATURE_SET_GLOBAL_SHUTTER;
+        FeatureParaLen = sizeof(MUINTPTR);
+        pFeaturePara = (MUINT8*)parg1;
+        LOG_MSG("[CMD_SENSOR_SET_GLOBAL_SHUTTER] FeaturePara[0] = %d, FeatureParaLen = %d\n", (MUINT8)FeaturePara[0], FeatureParaLen);
+        break;
     default:
         LOG_ERR("[sendCommand]Command ID = %d is undefined\n",cmd);
         return SENSOR_UNKNOWN_ERROR;

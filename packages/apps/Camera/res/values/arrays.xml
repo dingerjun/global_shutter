@@ -1031,7 +1031,17 @@
         <item>@drawable/ic_3d_switch_off</item>
         <item>@drawable/ic_3d_switch_on</item>
     </array>
-    
-    
+
+    <string-array name="pref_global_shutter_entryvalues" translatable="false">
+        <item>off</item>
+        <item>on</item>
+    </string-array>
+
+    <array name="pref_global_shutter_entries" translatable="false">
+        <item>@string/pref_global_shutter_entry_off</item>
+        <item>@string/pref_global_shutter_entry_on</item>
+    </array>
+
+
     
 </resources>

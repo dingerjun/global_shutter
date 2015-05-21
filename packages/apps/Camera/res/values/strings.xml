@@ -334,6 +334,14 @@
     <!-- The on/off switch in camera settings, such as store location. [CHAR LIMIT = NONE] -->
     <string name="accessibility_switch">%1$s switch</string>
     <!-- TODO: remove the string as it is a work-around solution to bypass the default speak of the element type. -->
+
+    <string name="pref_global_shutter_title">Global shutter</string>
+    <string name="pref_global_shutter_default" translatable="false">off</string>
+    <!-- Settings screen, Record location dialog choices -->
+    <string name="pref_global_shutter_entry_off">Off</string>
+    <string name="pref_global_shutter_entry_on">On</string>
+
+
     <string name="empty" translatable="false">" "</string>
 
 </resources>

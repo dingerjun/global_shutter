@@ -117,6 +117,9 @@ public class SettingConstants {
     
     public static final String KEY_FB_EXTEME_BEAUTY_SUPPORTED    = "fb-extreme-beauty-supported";
     public static final String KEY_INTO_VIDEO_FACE_BEAUTY_NORMAL = "face-beauty-normal";
+
+//dingej1 2015.05.17
+    public static final String KEY_GLOBAL_SHUTTER = "pref_global_shutter";
     
     // setting index
     public static final int ROW_SETTING_FACE_BEAUTY               = 0;
@@ -181,6 +184,8 @@ public class SettingConstants {
     public static final int ROW_SETTING_DISTANCE                  = 59;//common
     public static final int ROW_SETTING_DUAL_CAMERA_MODE          = 60;//common
     public static final int ROW_SETTING_OBJECT_TRACKING           = 61;
+//dingej1 2015.05.17
+    public static final int ROW_SETTING_GLOBAL_SHUTTER           = 62;
     
     public final static int NEITHER_IN_PARAMETER_NOR_IN_PREFERENCE = 0;
     public final static int ONLY_IN_PARAMETER = 1;
@@ -256,6 +261,8 @@ public class SettingConstants {
         SETTING_TYPE[ROW_SETTING_MULTI_FACE_MODE]           = BOTH_IN_PARAMETER_AND_PREFERENCE;
         SETTING_TYPE[ROW_SETTING_FAST_AF]                   = BOTH_IN_PARAMETER_AND_PREFERENCE;
         SETTING_TYPE[ROW_SETTING_DISTANCE]                  = BOTH_IN_PARAMETER_AND_PREFERENCE;
+//dingej1 2015.05.17
+        SETTING_TYPE[ROW_SETTING_GLOBAL_SHUTTER]            = BOTH_IN_PARAMETER_AND_PREFERENCE;
     }
     
     // setting key and index
@@ -327,6 +334,8 @@ public class SettingConstants {
         KEYS_FOR_SETTING[ROW_SETTING_REFOCUS]               = KEY_REFOCUS;
         KEYS_FOR_SETTING[ROW_SETTING_NORMAL]                = KEY_NORMAL;
         KEYS_FOR_SETTING[ROW_SETTING_OBJECT_TRACKING]       = KEY_OBJECT_TRACKING;
+//dingej1 2015.05.17
+        KEYS_FOR_SETTING[ROW_SETTING_GLOBAL_SHUTTER]        = KEY_GLOBAL_SHUTTER;
     };
     
     public static final int[] SETTING_GROUP_COMMON_FOR_TAB = new int[]{
@@ -339,6 +348,7 @@ public class SettingConstants {
         ROW_SETTING_WHITE_BALANCE,//common
         ROW_SETTING_IMAGE_PROPERTIES,
         ROW_SETTING_ANTI_FLICKER,//common
+        ROW_SETTING_GLOBAL_SHUTTER,//common dingej1 2015.05.17
     };
     
     public static final int[] SETTING_GROUP_MAIN_COMMON_FOR_TAB = new int[]{
@@ -346,6 +356,7 @@ public class SettingConstants {
         ROW_SETTING_MULTI_FACE_MODE,
         ROW_SETTING_IMAGE_PROPERTIES,
         ROW_SETTING_ANTI_FLICKER,//common
+        ROW_SETTING_GLOBAL_SHUTTER,//common dingej1 2015.05.17
     };
     
     public static final int[] SETTING_GROUP_COMMON_FOR_LOMOEFFECT = new int[]{
@@ -357,6 +368,7 @@ public class SettingConstants {
         ROW_SETTING_WHITE_BALANCE,//common
         ROW_SETTING_IMAGE_PROPERTIES,
         ROW_SETTING_ANTI_FLICKER,//common
+        ROW_SETTING_GLOBAL_SHUTTER,//common dingej1 2015.05.17
     };
     
     public static final int[] SETTING_GROUP_CAMERA_FOR_TAB = new int[]{
@@ -453,6 +465,7 @@ public class SettingConstants {
         ROW_SETTING_COLOR_EFFECT,// common
         ROW_SETTING_RECORD_LOCATION,// common
         ROW_SETTING_ANTI_FLICKER,// common
+        ROW_SETTING_GLOBAL_SHUTTER,//common dingej1 2015.05.17
         ROW_SETTING_3DNR,
         ROW_SETTING_SELF_TIMER,// camera
         ROW_SETTING_AIS,
@@ -488,6 +501,7 @@ public class SettingConstants {
         ROW_SETTING_COLOR_EFFECT,// common
         ROW_SETTING_RECORD_LOCATION,// common
         ROW_SETTING_ANTI_FLICKER,// common
+        ROW_SETTING_GLOBAL_SHUTTER,//common dingej1 2015.05.17
         ROW_SETTING_3DNR,// video
         ROW_SETTING_VIDEO_STABLE,// video
         ROW_SETTING_MICROPHONE,// video

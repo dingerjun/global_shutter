@@ -84,6 +84,7 @@ public class SettingDataBase {
         MATRIX_RESTRICTION_STATE[SettingConstants.ROW_SETTING_ISO]                   = new int[]{STATE_E0, STATE_R0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0,  STATE_E0, STATE_D0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0};//12: ISO
         MATRIX_RESTRICTION_STATE[SettingConstants.ROW_SETTING_AIS]                   = new int[]{STATE_E0, STATE_R0, STATE_E0, STATE_R0, STATE_R0, STATE_R0, STATE_R0,  STATE_R0, STATE_R0, STATE_R0, STATE_R0, STATE_R0, STATE_R0, STATE_R0};//1//ais
         MATRIX_RESTRICTION_STATE[SettingConstants.ROW_SETTING_ANTI_FLICKER]          = new int[]{STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0,  STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0};//14: Anti flicker
+        MATRIX_RESTRICTION_STATE[SettingConstants.ROW_SETTING_GLOBAL_SHUTTER]          = new int[]{STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0,  STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0};//14: Anti flicker
         MATRIX_RESTRICTION_STATE[SettingConstants.ROW_SETTING_VIDEO_STABLE]          = new int[]{STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0,  STATE_R0, STATE_E0, STATE_E0, STATE_R0, STATE_E0, STATE_E0, STATE_E0};//15: video stable
         MATRIX_RESTRICTION_STATE[SettingConstants.ROW_SETTING_MICROPHONE]            = new int[]{STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0,  STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0};//16 microphone
         MATRIX_RESTRICTION_STATE[SettingConstants.ROW_SETTING_AUDIO_MODE]            = new int[]{STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0, STATE_E0,  STATE_R0, STATE_E0, STATE_E0, STATE_R0, STATE_E0, STATE_E0, STATE_E0};//17 audio mode
@@ -158,6 +159,7 @@ public class SettingDataBase {
         RESET_STATE_VALUE[SettingConstants.ROW_SETTING_PICTURE_SIZE]          = null;//none need check
         RESET_STATE_VALUE[SettingConstants.ROW_SETTING_ISO]                   = new String[]{"auto"};//auto
         RESET_STATE_VALUE[SettingConstants.ROW_SETTING_ANTI_FLICKER]          = null;//none
+        RESET_STATE_VALUE[SettingConstants.ROW_SETTING_GLOBAL_SHUTTER]          = null;//none //dingej1
         RESET_STATE_VALUE[SettingConstants.ROW_SETTING_VIDEO_STABLE]          = new String[]{"off"};
         RESET_STATE_VALUE[SettingConstants.ROW_SETTING_3DNR]                  = new String[]{"off"};
         RESET_STATE_VALUE[SettingConstants.ROW_SETTING_MICROPHONE]            = new String[]{"on","off"};
@@ -223,6 +225,7 @@ public class SettingDataBase {
         DEFAULT_VALUE_FOR_SETTING_ID[SettingConstants.ROW_SETTING_PICTURE_SIZE]          = UNKNOWN;
         DEFAULT_VALUE_FOR_SETTING_ID[SettingConstants.ROW_SETTING_ISO]                   = R.string.pref_camera_iso_default;
         DEFAULT_VALUE_FOR_SETTING_ID[SettingConstants.ROW_SETTING_ANTI_FLICKER]          = R.string.pref_camera_antibanding_default;
+        DEFAULT_VALUE_FOR_SETTING_ID[SettingConstants.ROW_SETTING_GLOBAL_SHUTTER]          = R.string.pref_global_shutter_default; //dingej1
         DEFAULT_VALUE_FOR_SETTING_ID[SettingConstants.ROW_SETTING_VIDEO_STABLE]          = R.string.pref_camera_eis_default;
         DEFAULT_VALUE_FOR_SETTING_ID[SettingConstants.ROW_SETTING_3DNR]                  = R.string.pref_camera_3dnr_default;
         DEFAULT_VALUE_FOR_SETTING_ID[SettingConstants.ROW_SETTING_MICROPHONE]            = R.string.pref_camera_recordaudio_default;

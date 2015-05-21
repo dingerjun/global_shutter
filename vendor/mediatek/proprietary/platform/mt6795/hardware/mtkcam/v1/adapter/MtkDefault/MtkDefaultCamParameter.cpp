@@ -49,6 +49,7 @@ using namespace MtkCamUtils;
 //
 #include <mtkcam/hal/IHalSensor.h>
 //
+//#include <mtkcam/hal/sensor_hal.h>
 #include <mtkcam/hwutils/CamManager.h>
 using namespace NSCam::Utils;
 //
@@ -57,6 +58,7 @@ using namespace NSCam::Utils;
 #include "inc/MtkDefaultCamAdapter.h"
 using namespace NSMtkDefaultCamAdapter;
 //
+//#include "inc/MtkDefaultCamAdapter.h"
 #include "camera_custom_eis.h"
 
 /******************************************************************************
@@ -181,6 +183,44 @@ setParameters()
     {
         //TBD: update ZOOM
     }
+
+    {
+//dingej 2015.05.19 update global shutter parameter
+        IHalSensorList* const pHalSensorList = IHalSensorList::get();
+        IHalSensor* pSensorObj = NULL;
+        if( pHalSensorList != NULL )
+        {
+            pSensorObj = pHalSensorList->createSensor(
+                                                LOG_TAG,
+                                                getOpenId());
+        }
+        else
+        {
+            MY_LOGE("pHalSensorList == NULL");
+        }
+        String8 const s = mpParamsMgr->getStr(MtkCameraParameters::KEY_GLOBAL_SHUTTER);
+        MINT32 globalshutter = false;
+        if(strcmp(s.string(), CameraParameters::TRUE) == 0)
+            globalshutter = true;
+//        SensorHal* pSensorHal = NULL;
+//        halSensorDev_e eSensorDev = (halSensorDev_e)DevMetaInfo::queryHalSensorDev(getOpenId());
+//        pSensorHal = SensorHal::createInstance();
+        if(pSensorObj)
+        {
+//            pSensorHal->sendCommand(eSensorDev, CMD_SENSOR_SET_GLOBAL_SHUTTER, (MINT32)&globalshutter);
+
+            MY_LOGE("pHalSensorList == dingerjun");
+            MY_LOGE("global shutter %d ... %s",globalshutter, s.string());
+            pSensorObj->sendCommand(pHalSensorList->querySensorDevIdx(getOpenId()),
+                                    SENSOR_CMD_SET_GLOBAL_SHUTTER, (MUINTPTR)&globalshutter, 0, 0);
+            char value_int[16];
+            sprintf(value_int, "%d", globalshutter);
+            //property_set("globalshutter", value_int);
+            //pSensorHal->destroyInstance();
+            //pSensorHal = NULL;
+        }
+    }
+
     // set Param to 3A
     // DEFAULT DEFINITION CATEGORY
     if( mpStateManager->isState(IState::eState_Recording) &&

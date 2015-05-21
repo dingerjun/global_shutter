@@ -256,6 +256,7 @@ static imgsensor_struct imgsensor = {
     .i2c_write_id = 0x20,
     .update_sensor_otp_awb = 0,
     .update_sensor_otp_lsc = 0,
+    .globalshutter_en = KAL_FALSE,  //global shutter enable: KAL_FALSE for disable global shutter, KAL_TRUE for enable global shutter
 };
 
 
@@ -3528,6 +3529,18 @@ static kal_uint32 get_default_framerate_by_scenario(MSDK_SCENARIO_ID_ENUM scenar
     return ERROR_NONE;
 }
 
+static kal_uint32 set_global_shutter(kal_bool enable)
+{
+    LOG_INF("global shutter enable = %d\n", enable);
+    spin_lock(&imgsensor_drv_lock);
+    if (enable) //enable auto flicker
+        imgsensor.globalshutter_en = KAL_TRUE;
+    else //Cancel Auto flick
+        imgsensor.globalshutter_en = KAL_FALSE;
+    spin_unlock(&imgsensor_drv_lock);
+    return ERROR_NONE;
+}
+
 static kal_uint32 feature_control(MSDK_SENSOR_FEATURE_ENUM feature_id,
                                   UINT8 *feature_para,UINT32 *feature_para_len)
 {
@@ -3649,6 +3662,9 @@ static kal_uint32 feature_control(MSDK_SENSOR_FEATURE_ENUM feature_id,
             }
         case SENSOR_FEATURE_SET_IHDR_SHUTTER_GAIN:
             LOG_INF("SENSOR_SET_SENSOR_IHDR LE=%d, SE=%d, Gain=%d\n",(UINT16)*feature_data,(UINT16)*(feature_data+1),(UINT16)*(feature_data+2));
+            break;
+        case SENSOR_FEATURE_SET_GLOBAL_SHUTTER:
+            set_global_shutter((BOOL) *feature_data);
             break;
         default:
             break;

@@ -178,6 +178,9 @@ public class ParametersHelper {
         case SettingConstants.ROW_SETTING_ANTI_FLICKER:// common
             parameters.setAntibanding(value);
             break;
+        case SettingConstants.ROW_SETTING_GLOBAL_SHUTTER:// common //dingej1 2015.05.17
+            parameters.set("global_shutter",value);
+            break;
         
         case SettingConstants.ROW_SETTING_SELF_TIMER:// camera app layer
             break;
@@ -389,6 +392,11 @@ public class ParametersHelper {
         case SettingConstants.ROW_SETTING_ANTI_FLICKER:// common
             value = parameters.getAntibanding();
             break;
+
+        case SettingConstants.ROW_SETTING_GLOBAL_SHUTTER:// common //dingej 2015.05.17
+            value = parameters.get("global_shutter");
+            break;
+
         
         case SettingConstants.ROW_SETTING_SELF_TIMER:// camera app layer
             break;
@@ -575,6 +583,10 @@ public class ParametersHelper {
             supportedList = parameters.getSupportedAntibanding();
             break;
         
+        case SettingConstants.ROW_SETTING_GLOBAL_SHUTTER:// common
+            supportedList = parameters.getSupportedAntibanding();
+            break;
+
         case SettingConstants.ROW_SETTING_ZSD:// camera
             supportedList = parameters.getSupportedZSDMode();
             break;

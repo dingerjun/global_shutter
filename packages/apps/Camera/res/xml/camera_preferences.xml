@@ -138,7 +138,12 @@
         camera:title="@string/pref_camera_antibanding_title"
         camera:entries="@array/pref_camera_antibanding_entries"
         camera:entryValues="@array/pref_camera_antibanding_entryvalues" />
-
+    <ListPreference
+        camera:key="pref_global_shutter"
+        camera:defaultValue="@string/pref_global_shutter_default"
+        camera:title="@string/pref_global_shutter_title"
+        camera:entries="@array/pref_global_shutter_entries"
+        camera:entryValues="@array/pref_global_shutter_entryvalues"/>
     <ListPreference
         camera:key="pref_camera_zsd_key"
         camera:defaultValue="@string/pref_camera_zsd_default"
