@@ -1033,8 +1033,8 @@
     </array>
 
     <string-array name="pref_global_shutter_entryvalues" translatable="false">
-        <item>off</item>
-        <item>on</item>
+        <item>false</item>
+        <item>true</item>
     </string-array>
 
     <array name="pref_global_shutter_entries" translatable="false">

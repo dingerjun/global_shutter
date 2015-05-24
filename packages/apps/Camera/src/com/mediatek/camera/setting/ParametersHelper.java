@@ -97,6 +97,8 @@ public class ParametersHelper {
     private static final String MULITI_FACE_BEAUTY_MODE = "Multi";
     private static final String VIDEO_FACE_BEAUTY_ENABLE = "true";
     private static final String VIDEO_FACE_BEAUTY_DISABLE = "false";
+
+    private static final String KEY_GLOBAL_SHUTTER = "global-shutter";
     
     public static void setParametersValue(Parameters parameters, int cameraId, String key, String value) {
         int settingId = SettingConstants.getSettingId(key);
@@ -180,6 +182,9 @@ public class ParametersHelper {
             break;
         case SettingConstants.ROW_SETTING_GLOBAL_SHUTTER:// common //dingej1 2015.05.17
             parameters.set("global_shutter",value);
+            break;
+        case SettingConstants.ROW_SETTING_GLOBAL_SHUTTER:// common //dingej1 2015.05.17
+            parameters.set(KEY_GLOBAL_SHUTTER,value);
             break;
         
         case SettingConstants.ROW_SETTING_SELF_TIMER:// camera app layer
@@ -388,6 +393,11 @@ public class ParametersHelper {
         
         case SettingConstants.ROW_SETTING_RECORD_LOCATION:// common app layer
             break;
+
+        case SettingConstants.ROW_SETTING_GLOBAL_SHUTTER:// common //dingej 2015.05.17
+            value = parameters.get(KEY_GLOBAL_SHUTTER);
+            break;
+
         
         case SettingConstants.ROW_SETTING_ANTI_FLICKER:// common
             value = parameters.getAntibanding();
@@ -401,6 +411,10 @@ public class ParametersHelper {
         case SettingConstants.ROW_SETTING_SELF_TIMER:// camera app layer
             break;
         
+        case SettingConstants.ROW_SETTING_GLOBAL_SHUTTER:// common
+            supportedList = getSupportedValues(parameters, KEY_GLOBAL_SHUTTER);
+            break;
+
         case SettingConstants.ROW_SETTING_ZSD:// camera
             value = parameters.getZSDMode();
             break;
